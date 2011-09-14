@@ -1,0 +1,276 @@
+@import url("reset.css");
+
+/* HTML5 block elements */
+article, aside, footer, header, hgroup, nav, section {
+	display: block;
+}
+
+body {
+	color: black;
+	background-color: white;
+	font-family: Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Trebuchet MS', sans-serif;
+}
+
+strong, .strong {
+	font-weight: bold;
+}
+
+em, .em {
+	font-style: italic;
+}
+
+.name {
+	white-space: nowrap;
+}
+
+/* link treatment */
+
+a {
+	text-decoration: none;
+	color: #080;
+	padding: 0 0.3em;
+	margin: 0 -0.2em;
+	-webkit-box-shadow: 0 0.35em 0.2em -0.4em #2d2;
+}
+
+a:visited {
+	color: #080;
+}
+
+a:hover {
+	color: white;
+	background-color: #2d2;
+	-webkit-box-shadow: 0 0 0.1em 0.0em #2d2;
+}
+
+header h1 a, header h1 a:visited {
+	color: black;
+	padding-bottom: 0.1em;
+	-webkit-box-shadow: none;
+}
+header h1 a:hover {
+	color: white;
+	-webkit-box-shadow: 0 0 0.1em 0.0em #2d2;
+}
+
+/* end link treatment */
+
+header h1 {
+	font-size: 1.8em;
+	letter-spacing: 0.15em;
+}
+
+body {
+	background: transparent url(header.png) repeat-x right -15px;
+	margin-top: 40px;
+}
+
+footer {
+	background: transparent url(end-tamper.jpeg) no-repeat center top;
+	width: 60px;
+	height: 100px;
+	margin: 2em auto;
+}
+
+/* layout */
+
+#page {
+	max-width: 1024px;
+	min-width: 800px;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+
+/* table layout */
+#main {
+	display: table-row;
+}
+#sidebar {
+	display: table-cell;
+}
+#content {
+	display: table-cell;
+}
+
+#sidebar {
+	padding-right: 2em;
+	padding-top: 1em;
+	min-width: 280px;
+	width: 30%;
+}
+
+article {
+	padding: 1em;
+}
+
+article h1 {
+	font-size: 1.2em;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	max-width: 32em;
+}
+
+article.link h1 {
+	padding-left: 44px;
+	background: transparent url(link.png) no-repeat 0 5px;
+}
+
+article.post h1 {
+	padding-left: 36px;
+	margin-bottom: 0.5em;
+	background: transparent url(post.png) no-repeat -1px 3px;
+}
+
+article > p.date {
+	font-size: 0.9em;
+	color: #999;
+	display: inline-block;
+}
+
+article > p.date:before {
+	content: "» ";
+}
+
+article p, article blockquote {
+	margin-bottom: 1em;
+}
+
+article p:last-child {
+	margin-bottom: 0;
+}
+
+article samp, article code {
+	display: block;
+	max-width: 700px;
+	overflow: auto;
+	margin: 1em;
+	padding: 1em;
+	color: #333;
+	background-color: #f6f6f6;
+}
+
+article blockquote {
+	border-left: 5px solid #ccc;
+	margin-left: 5px;
+	padding-left: 1em;
+	color: #555;
+}
+
+article h2 {
+	margin: 1em 0;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+article span.strike {
+	text-decoration: line-through;
+}
+
+article .gist {
+	font-size: 90%;
+	margin: 0 1em;
+}
+
+/* profile */
+
+#profile {
+	overflow: hidden;
+	margin-bottom: 2em;
+}
+
+#profile p, #profile dl, #profile dt, #profile dd {
+	display: inline;
+}
+
+#profile dl dd:after {
+	content: ","
+}
+#profile dl dd:last-child:after {
+	content: "."
+}
+#profile dl dd:last-child:before {
+	content: "and "
+}
+
+#profile h2 {
+	position: absolute;
+	left: -10000px;
+}
+
+#profile .lastname {
+	display: none;
+}
+
+#profile img {
+	float: left;
+	margin: 5px 0.8em 0.2em 5px;
+	border: 1px solid #ddd;
+	padding: 2px;
+	-webkit-box-shadow: 0 0 8px -3px #666;
+}
+
+/* elsewhere */
+
+#elsewhere {
+}
+
+#elsewhere h2 {
+	position: absolute;
+	left: -10000px;
+}
+
+#elsewhere ul {
+}
+
+#elsewhere ul li {
+	background: transparent none no-repeat scroll 0 0.2em;
+	padding-left: 22px;
+	margin: 0.5em 0;
+}
+
+#elsewhere ul li a + span {
+	color: #aaa;
+	font-size: 0.9em;
+}
+
+#elsewhere ul li span:before {
+	content: "» ";
+}
+
+#elsewhere li.twitter { background-image: url(icons/twitter.png); }
+#elsewhere li.github { background-image: url(icons/github.png); }
+#elsewhere li.delicious { background-image: url(icons/delicious.png); }
+#elsewhere li.linkedin { background-image: url(icons/linkedin.png); }
+#elsewhere li._99designs { background-image: url(icons/99designs.png); }
+#elsewhere li.flickr { background-image: url(icons/flickr.png); }
+
+
+/* page: about */
+
+#about h2 {
+	margin: 1em 0 0.5em;
+	font-size: 1.2em;
+	border-bottom: 2px solid #eee;
+}
+
+#about p {
+	margin-bottom: 1em;
+}
+
+#error img {
+	-webkit-animation-name: sprocket;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes sprocket {
+	from { -webkit-transform: rotate(0deg); }
+	to   { -webkit-transform: rotate(360deg); }
+}
